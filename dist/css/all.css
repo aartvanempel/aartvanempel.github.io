@@ -1,0 +1,40 @@
+@charset "UTF-8";
+.name {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: relative;
+  margin: 0;
+  font-family: monospace;
+  letter-spacing: 0.5em; }
+  .name > span {
+    -ms-flex-item-align: start;
+        align-self: flex-start; }
+    .name > span + span {
+      margin-top: .2em; }
+    .name > span:not(:last-child):before {
+      content: 'x';
+      opacity: 0; }
+  .name:before, .name:after {
+    opacity: 0;
+    transition: opacity 250ms; }
+  .name:hover:before, .name:hover:after {
+    opacity: 1; }
+  .name:before {
+    content: '';
+    position: absolute;
+    left: 3.25ch;
+    top: 0;
+    width: 2ch;
+    height: 4em;
+    opacity: 0;
+    background-color: yellow;
+    z-index: -1; }
+  .name:after {
+    content: '🐵';
+    position: absolute;
+    top: 4em;
+    left: calc(50% - .75em); }
+
+/*# sourceMappingURL=all.css.map */
